@@ -18,6 +18,7 @@ const ContactForm = () => {
     });
   };
 
+  //dispatching action
   function handleSave() {
     dispatch(action.AddContact(form));
   }
