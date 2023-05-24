@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 
-export const ContactForm = () => {
+import { action } from "../Redux/Reducer";
+import { useDispatch } from "react-redux";
+const ContactForm = () => {
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     first_name: "",
     last_name: "",
     mob: "",
     status: "active",
   });
+
   const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
+
   function handleSave() {
-    console.log(form);
+    dispatch(action.AddContact(form));
   }
 
   return (
@@ -53,7 +58,7 @@ export const ContactForm = () => {
         <input
           className="w-full border border-gray-400 p-2 rounded-md"
           id="last-name"
-          type="number"
+          type="phone"
           name="mob"
           min="10"
           max="10"
@@ -85,3 +90,4 @@ export const ContactForm = () => {
     </div>
   );
 };
+export default ContactForm;
