@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import { action } from "../Redux/Reducer";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const ContactForm = () => {
+  const Naviate = useNavigate();
   const dispatch = useDispatch();
   const [form, setForm] = useState({
     first_name: "",
@@ -21,6 +23,7 @@ const ContactForm = () => {
   //dispatching action
   function handleSave() {
     dispatch(action.AddContact(form));
+    Naviate("/");
   }
 
   return (
