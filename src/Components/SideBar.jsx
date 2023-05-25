@@ -1,7 +1,7 @@
 import { AiFillContacts } from "react-icons/ai";
 import { AiOutlineBarChart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-export default function Sidebar() {
+function SideBar() {
   return (
     <div className="flex border-r-2 ">
       <div className="flex pt-16 flex-col h-screen  p-3 bg-slate-500 shadow w-50 text-white">
@@ -36,3 +36,4 @@ export default function Sidebar() {
     </div>
   );
 }
+export default SideBar;
