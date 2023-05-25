@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Popup from "../Components/PopUp";
+import { action } from "../Redux/Reducer";
 const Contacts = () => {
   const AllContacts = useSelector((state) => state.reducer.contacts);
   const dispatch = useDispatch();
@@ -108,7 +109,10 @@ const Contacts = () => {
                   </button>
                 </Link>
 
-                <button className="rounded p-2 bg-red-600 text-white">
+                <button
+                  className="rounded p-2 bg-red-600 text-white"
+                  onClick={() => dispatch(action.DeleteContact(el.id))}
+                >
                   Delete
                 </button>
               </div>

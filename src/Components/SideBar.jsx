@@ -3,9 +3,9 @@ import { AiOutlineBarChart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 export default function Sidebar() {
   return (
-    <div className="flex border-r-2">
-      <div className="flex pt-16 flex-col h-screen p-3 bg-white shadow w-60">
-        <div className="space-y-3">
+    <div className="flex border-r-2 ">
+      <div className="flex pt-16 flex-col h-screen  p-3 bg-white shadow w-60">
+        <div className="space-y-3 ">
           <div className="flex items-center">
             <h2 className="text-xl mt-4 font-bold">Dashboard</h2>
           </div>

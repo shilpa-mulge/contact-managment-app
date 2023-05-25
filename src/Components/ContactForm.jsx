@@ -27,7 +27,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-1/2 mx-auto my-4 pt-16">
+    <div className="w-1/2 m-auto  pt-16">
       <h2 className="text-2xl font-bold mb-4">Create Contact</h2>
       <div className="mb-4">
         <label className="block font-bold mb-2" htmlFor="first-name">

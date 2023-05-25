@@ -128,6 +128,17 @@ const Reducer = createSlice({
         }
       }
     },
+
+    //Delete
+    DeleteContact(state, action) {
+      let Contacts = JSON.parse(localStorage.getItem("contacts"));
+      let updatedContacts = Contacts.filter((el) => el.id != action.payload);
+      localStorage.setItem("contacts", JSON.stringify(updatedContacts));
+      return {
+        ...state,
+        contacts: [...updatedContacts],
+      };
+    },
   },
 });
 export const action = Reducer.actions;
