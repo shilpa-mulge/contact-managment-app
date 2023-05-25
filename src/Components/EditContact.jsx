@@ -65,7 +65,9 @@ function EditContact() {
         <input
           className="w-full border border-gray-400 p-2 rounded-md"
           id="last-name"
-          type="number"
+          type="tel"
+          placeholder="1234567890"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
           name="mob"
           value={form.mob}
           onChange={handleChange}
